@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Question5
@@ -27,6 +28,33 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    int numOfLoop = in.nextInt();
+    int i = 0;
+    int[] numberArray = {}; 
+
+    while (i < numOfLoop)
+    {
+      numberArray = Arrays.copyOf(numberArray, numberArray.length + 1);
+      int number = in.nextInt();
+      numberArray[numberArray.length - 1] = number;
+      i++;
+    }
+    int maxValue = 0, maxCount = 0;
+    for (int a = 0; a < numberArray.length; ++a) 
+    {
+      int count = 0;
+      for (int j = 0; j < numberArray.length; ++j) 
+      {
+          if (numberArray[j] == numberArray[a])
+              ++count;
+      }
+      if (count > maxCount) 
+      {
+          maxCount = count;
+          maxValue = numberArray[a];
+      }
+    }
+    // Run through all number
+    System.out.print(maxValue);
   }
 }
