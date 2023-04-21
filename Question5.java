@@ -53,6 +53,7 @@ public class Question5
           maxCount = count;
           maxValue = numberArray[a];
       }
+      in.close();
     }
     // Run through all number
     System.out.print(maxValue);
