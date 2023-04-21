@@ -19,6 +19,6 @@ public class Question2
     in.close();
 
     double BMI = weight / (height * height);
-    System.out.printf("The Body Mass Index (BMI) is " + "%.2f" + " kg/m2", BMI);
+    System.out.printf("The Body Mass Index (BMI) is " + "%.1f" + " kg/m2", BMI);
   }
 }
